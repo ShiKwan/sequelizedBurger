@@ -1,0 +1,45 @@
+
+<div class="container">
+    <div class="row serve-container">    
+        <div class="col-md-6">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Serving</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Served</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">New Order</h3>
+        </div>
+        <div class="panel-body">
+            <form class="create-form">
+            
+                <div class="form-group">
+                    <label for="bn">Burger Name:</label>
+                    <input type="text" id="bn" name="name">
+                </div>
+                <button type="submit" class="btn btn-primary">Serve Burger</button>
+            </form>
+        </div>
+    </div>
+</div>
