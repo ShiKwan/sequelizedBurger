@@ -14,6 +14,6 @@ var Burger = sequelizeConn.define('burger', {
     timestamps: false
   })
 
-//Burger.sync();
+Burger.sync();
 
 module.exports = Burger

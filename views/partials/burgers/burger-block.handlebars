@@ -1,10 +1,10 @@
 <li class="list-group-item">
     {{#if devoured}}
         <span class="badge">
-            <strong><a href="#" class ="change-devour" data-id="{{id}}" data-devoured="{{devoured}}" >devour it!</a></strong>
+            <strong><a href="#" class ="change-devour" data-id="{{this.dataValues.id}}" data-devoured="{{this.dataValues.devoured}}" >devour it!</a></strong>
         </span>
-        {{id}}.  {{burger}}
+        {{this.dataValues.id}}.  {{this.dataValues.burger}}
     {{else}}
-         {{id}}. {{burger}}
+         {{this.dataValues.id}}. {{this.dataValues.burger}}
      {{/if}}
 </li>

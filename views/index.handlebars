@@ -8,7 +8,7 @@
                 </div>
                 <div class="panel-body">
                     <ul>
-                        {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
+                        {{#each burgers}} {{#unless this.dataValues.devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
                     </ul>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="panel-body">
                     <ul class="list-group">
-                        {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+                        {{#each burgers}} {{#if this.dataValues.devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
                     </ul>
                 </div>
             </div>

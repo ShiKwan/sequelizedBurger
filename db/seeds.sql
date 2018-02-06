@@ -1,8 +1,8 @@
 
 -- Insert a set of records.
 INSERT INTO burgers
-    (burger)
+    (burger, devoured)
 VALUES
-    ('Cumin Lamb with sesame buns'),
-    ('quarter pounder cheese burger'),
-    ('vege delight sandwich');
+    ('Cumin Lamb with sesame buns',0),
+    ('quarter pounder cheese burger',0),
+    ('vege delight sandwich',0);
