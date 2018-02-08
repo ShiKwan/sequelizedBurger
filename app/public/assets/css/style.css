@@ -1,16 +1,15 @@
 .jumbotron {
-    background-image: url("../img/burger_banner.jpg");
-    background-size: cover;
-    background-position : center;
-    height: 100vh;
-    width: 100vw;
+    height: 40vh;
+    background-image: url("../img/burger-cover.png");
+    background-size: contain;
+    background-position: center ;
+    background-repeat: no-repeat;
 }
-
-.jumbotron .head {
+.head {
     font-family: 'Rammetto One', cursive;
     font-size: 30px;
-    padding-left: 50px;
     color: maroon;
+    text-align: center;
 }
 
 a.change-devour, .change-devour:active,
@@ -20,6 +19,10 @@ a.change-devour, .change-devour:active,
 color:white;}
 
 
-.serve-container{
-    padding-top:20%;
+.burger-icon{
+    width: 40px;
+}
+
+.burger-small-icon{
+    width: 25px;
 }

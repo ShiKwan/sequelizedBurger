@@ -4,6 +4,8 @@ var bodyParser = require('body-parser')
 var app = express()
 var port = process.env.PORT || 3000
 
+var db = require("./app/models");
+
 app.use(express.static('app/public'))
 
 // Sets up the Express app to handle data parsing
@@ -15,10 +17,11 @@ var exphbs = require('express-handlebars')
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
-var routes = require('./controllers/burgers_controller.js')
+require("./controllers/burgers_controller.js")(app);
 
-app.use(routes)
-
-app.listen(port, function () {
+db.sequelize.sync({ force: true}).then(function(){
+  app.listen(port, function () {
   console.log('App now listening at localhost : ' + port)
+})
+
 })

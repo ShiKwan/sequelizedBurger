@@ -1,5 +1,5 @@
 $(function () {
-  $('.create-form').on('submit', function (event) {
+  $('#btnCreate').on('click', function (event) {
     event.preventDefault()
 
     var newBurger = {
@@ -13,7 +13,7 @@ $(function () {
     }).then(
       function () {
         console.log('created new burger')
-        location.reload()
+        location.reload();
       }
     )
   })
@@ -21,11 +21,14 @@ $(function () {
   $('.change-devour').on('click', function(event){
       var id = $(this).data("id");
       var newDevour = $(this).data("devoured")
-
+      console.log("id : " + id);
+      console.log(newDevour);
       var newDevourState = {
-          devoured : newDevour
+          devoured : true,
+          customerName : $('.textbox[data-id=' + id + ' ]').val()
       }
-
+      console.log("new devour state --: ");
+      console.log(newDevourState);
       $.ajax("/api/burgers/" +id, {
           type : "PUT",
           data : newDevourState
