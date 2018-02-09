@@ -19,6 +19,14 @@ app.set('view engine', 'handlebars')
 
 require("./controllers/burgers_controller.js")(app);
 
+app.use(function(err, req, res, next) {
+    console.error('We had an error.', err);
+    res.status(500).json({
+        message: err.message
+    });
+    res.render('index', err.message);
+});
+
 db.sequelize.sync({ force: true}).then(function(){
   app.listen(port, function () {
   console.log('App now listening at localhost : ' + port)

@@ -26,3 +26,7 @@ color:white;}
 .burger-small-icon{
     width: 25px;
 }
+
+.required:after { content:" *"; }
+
+.required { color: red;}

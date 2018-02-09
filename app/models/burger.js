@@ -8,9 +8,15 @@ module.exports = function (sequelize, DataTypes) {
     },
     burger: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: {
+        args : false,
+        msg : 'Burger field cannot be null'
+      },
       validate: {
-        len: [1, 100]
+        len: {
+          args : [1, 100],
+         msg: 'Burger field must be between length of 1 and 100'
+        }
       }
     },
     devoured: {

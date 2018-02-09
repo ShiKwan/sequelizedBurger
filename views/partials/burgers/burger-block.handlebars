@@ -4,9 +4,8 @@
             <strong><a href="#" class ="change-devour" data-id="{{this.dataValues.id}}" data-devoured="{{this.dataValues.devoured}}" >devour it!</a></strong>
         </span>
         <img src="../assets/img/burger.png" alt="burger" class="burger-icon">{{this.dataValues.id}}.  {{this.dataValues.burger}}
-        <input type="text" class="textbox" placeHolder="name" data-id="{{this.dataValues.id}}">
+        <br /><span class="txt-eaten">eaten by .. </span><input type="text" class="textbox" placeHolder="name" data-id="{{this.dataValues.id}}">
     {{else}}
          <img src="../assets/img/burger.png" alt="burger" class="burger-icon">{{this.dataValues.id}}. {{this.dataValues.burger}} Eaten By {{this.dataValues.Customer.customer}}
-
      {{/if}}
 </li>

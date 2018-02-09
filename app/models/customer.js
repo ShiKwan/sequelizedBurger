@@ -10,7 +10,10 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        notEmpty:  true
+        notEmpty:  {
+          args : true,
+          msg : "Customer name field cannot be empty."
+        }
       }
     },
     burger_id: {
