@@ -3,7 +3,7 @@ var Sequelize = require('sequelize')
 var  sequelize = "";
 if (process.env.JAWSDB_URL) {
   //connection = mysql.createConnection(process.env.JAWSDB_URL)
-  sequelize = new Sequelize('mysql://shxcatyo68mr3sb4:n93t7adn6qa6swgo@ffn96u87j5ogvehy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/b33txv3cgfz5y1ja');
+  sequelize = new Sequelize('mysql://p2sjt4v151kjy727:p4ux87hb5yru8led@q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/bgi08j8nvrap7qj6');
 }else {
   sequelize = new Sequelize('burgers_db', 'root', '', {
     host: 'localhost',

@@ -27,7 +27,7 @@ app.use(function(err, req, res, next) {
     res.render('index', err.message);
 });
 
-db.sequelize.sync({ force: true}).then(function(){
+db.sequelize.sync({ force: false}).then(function(){
   app.listen(port, function () {
   console.log('App now listening at localhost : ' + port)
 })
