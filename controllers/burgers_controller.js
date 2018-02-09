@@ -5,7 +5,7 @@ module.exports = function (app) {
     db.Burger.findAll({include: [db.Customer]}).then(function (results) {
       console.log('getting results')
       var hbsObject = {
-        burgers: results
+        burgers: results,
       }
       // console.log(hbsObject)
       //console.log(hbsObject.burgers)

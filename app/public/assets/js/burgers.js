@@ -11,12 +11,17 @@ $(function () {
       type: 'POST',
       data: newBurger
     }).then(
-      function () {
-        console.log('created new burger')
+      function (err) {
+        if(err){
+          console.log(err);
+        }else{
+          console.log('created new burger')
         location.reload();
+         }
+       
       }
     )
-  })
+  });
 
   $('.change-devour').on('click', function(event){
       var id = $(this).data("id");
